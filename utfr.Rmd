@@ -1,0 +1,18 @@
+---
+title: "Untitleddfg"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(readr)
+library(dplyr)
+
+read_csv2(
+    "DomicilioRenda_AM.csv",
+    locale = locale(encoding = "latin1")) %>% 
+    filter(Nome_do_municipio == "MANAUS") %>%
+    write_csv("basico-censo-cg-utf8.csv")
+
+```
+
+
